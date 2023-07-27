@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import team from './team.jpeg';
-import mba from './MBA.png';
+
+import logo from './logo.svg';
+import mba from './logo-dc.png';
+
 import './App.css';
 
 class App extends Component {
@@ -10,7 +12,8 @@ class App extends Component {
         <header className="App-header">
           <img src={mba} className="App-logo" alt="logo" />
 
-          <h1 className="App-title">Welcome to FIAP GTI 155</h1>
+          <h1 className="App-title">Welcome to Devops UFSCAR</h1>
+
         </header>
         <p className="App-intro">
          O time de milhões!

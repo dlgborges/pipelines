@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh 'npm install -D sonarqube-scanner'
             }
         }
         stage('Test') {
@@ -21,13 +21,16 @@ pipeline {
             }      
         }
 
+
         stage('Deploy for production') {       
+
             steps {
                 sh 'chmod -R +x ./jenkins/scripts'
                 sh './jenkins/scripts/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh './jenkins/scripts/kill.sh'
             }
+
         }      
     }
 }

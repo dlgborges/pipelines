@@ -1,9 +1,6 @@
 pipeline {
     agent {
-        label 'docker'{
-            image 'node:lts-bullseye-slim' 
-            args '-p 3000:3000'
-        }
+        label 'docker'
     }
     environment { 
         CI = 'true'
